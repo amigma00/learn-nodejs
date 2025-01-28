@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Toggle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        .greeting {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="greeting" id="greetingText">Good day!</div>
+    <button onclick="toggleGreeting()">Toggle Greeting</button>
+
+    <script>
+        function toggleGreeting() {
+            const greetingText = document.getElementById('greetingText');
+            greetingText.textContent = 
+                greetingText.textContent === 'Good day!' ? 'Good night!' : 'Good day!';
+        }
+    </script>
+</body>
+</html>
